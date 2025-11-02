@@ -106,12 +106,12 @@ export const projects = [
     title: 'Wanderlust Adventures',
     category: 'travel',
     description: 'Adventure travel website with booking system and customer reviews',
-    thumbnail: '/projects/travel/paradise-thumb.jpg',
-    tech: ['WordPress', 'Elementor', 'Booking Plugin'],
+    thumbnail: '/projects/travel/travel-agency-image01.png',
+    tech: ['WordPress', 'ElementorPro', 'Booking Plugin', 'SEO Optimization'],
     screenshots: [
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop'
+      '/projects/travel/travel-agency-image02.png',
+      '/projects/travel/travel-agency-image03.png',
+      '/projects/travel/travel-agency-image04.png'
     ]
   },
   {
