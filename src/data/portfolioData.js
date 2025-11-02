@@ -119,12 +119,12 @@ export const projects = [
     title: 'Global Tours & Travels',
     category: 'travel',
     description: 'Multi-destination travel portal with advanced search filters',
-    thumbnail: 'public/projects/travel/Travel.png',
+    thumbnail: '/projects/travel/Travel.png',
     tech: ['WordPress', 'Custom Plugin', 'Payment Gateway'],
     screenshots: [
-      'public/projects/travel/travel-image1.png',
-      'public/projects/travel/travel-image2.png',
-      'public/projects/travel/travel-image3.png'
+      '/projects/travel/travel-image1.png',
+      '/projects/travel/travel-image2.png',
+      '/projects/travel/travel-image3.png'
     ]
   },
   {
@@ -132,12 +132,12 @@ export const projects = [
     title: 'Fashion Boutique Store',
     category: 'ecommerce',
     description: 'High-end fashion eCommerce with advanced product filtering',
-    thumbnail: 'public/projects/fashion/Fashion E-commerce Store.png',
+    thumbnail: '/projects/fashion/Fashion E-commerce Store.png',
     tech: ['WooCommerce', 'Custom Theme', 'Payment Integration'],
     screenshots: [
-      'public/projects/fashion/fashion e-commerce store-image1.png',
-      'public/projects/fashion/fashion e-commerce store-image1.png',
-      'public/projects/fashion/fashion e-commerce store-image1.png'
+      '/projects/fashion/fashion e-commerce store-image1.png',
+      '/projects/fashion/fashion e-commerce store-image1.png',
+      '/projects/fashion/fashion e-commerce store-image1.png'
     ]
   },
   {
@@ -145,12 +145,12 @@ export const projects = [
     title: 'Tech Gadgets Hub',
     category: 'ecommerce',
     description: 'Electronics store with product comparison and reviews',
-    thumbnail: 'public/projects/ecommerce/E-commerce Store.png',
+    thumbnail: '/projects/ecommerce/E-commerce Store.png',
     tech: ['WooCommerce', 'WPBakery', 'Stripe/PayPal'],
     screenshots: [
-      'public/projects/ecommerce/ecom-image1.png',
-      'public/projects/ecommerce/ecom-image2.png',
-      'public/projects/ecommerce/ecom-image3.png'
+      '/projects/ecommerce/ecom-image1.png',
+      '/projects/ecommerce/ecom-image2.png',
+      '/projects/ecommerce/ecom-image3.png'
     ]
   },
   {
@@ -158,12 +158,12 @@ export const projects = [
     title: 'Organic Food Market',
     category: 'ecommerce',
     description: 'Organic products store with subscription model',
-    thumbnail: 'public/projects/ecommerce/grocerystore-image1.png',
+    thumbnail: '/projects/ecommerce/grocerystore-image1.png',
     tech: ['WooCommerce', 'Subscriptions', 'Custom Checkout'],
     screenshots: [
-      'public/projects/ecommerce/grocery-store-image02.png',
-      'public/projects/ecommerce/grocery-store-image03.png',
-      'public/projects/ecommerce/grocery-store-image04.png'
+      '/projects/ecommerce/grocery-store-image02.png',
+      '/projects/ecommerce/grocery-store-image03.png',
+      '/projects/ecommerce/grocery-store-image04.png'
     ]
   },
   {
@@ -171,12 +171,12 @@ export const projects = [
     title: 'Hotel Reservation System',
     category: 'booking',
     description: 'Complete hotel booking platform with room management',
-    thumbnail: 'public/projects/booking/hotelbooking.png',
+    thumbnail: '/projects/booking/hotelbooking.png',
     tech: ['WordPress', 'Booking Calendar', 'Payment Gateway'],
     screenshots: [
-      'public/projects/booking/hotel booking-image1.png',
-      'public/projects/booking/hotel booking-image2.png',
-      'public/projects/booking/hotel booking-image6.png'
+      '/projects/booking/hotel booking-image1.png',
+      '/projects/booking/hotel booking-image2.png',
+      '/projects/booking/hotel booking-image6.png'
     ]
   },
   {
@@ -184,12 +184,12 @@ export const projects = [
     title: 'Restaurant Booking Portal',
     category: 'booking',
     description: 'Table reservation system with menu integration',
-    thumbnail: 'public/projects/booking/Hotel.png',
+    thumbnail: '/projects/booking/Hotel.png',
     tech: ['WordPress', 'OpenTable API', 'Custom Forms'],
     screenshots: [
-      'public/projects/booking/restaurant-image1.png',
-      'public/projects/booking/restaurant-image2.png',
-      'public/projects/booking/restaurant-image3.png'
+      '/projects/booking/restaurant-image1.png',
+      '/projects/booking/restaurant-image2.png',
+      '/projects/booking/restaurant-image3.png'
     ]
   },
   {
@@ -197,11 +197,11 @@ export const projects = [
     title: 'Hotel Booking Site',
     category: 'booking',
     description: 'Multi-event booking system with ticketing',
-    thumbnail: 'public/projects/booking/hotelbooking2.png',
+    thumbnail: '/projects/booking/hotelbooking2.png',
     tech: ['WordPress', 'Events Calendar', 'WooCommerce'],
     screenshots: [
-      'public/projects/booking/hotel booking-image4.png',
-      'public/projects/booking/hotel booking-image5.png',
+      '/projects/booking/hotel booking-image4.png',
+      '/projects/booking/hotel booking-image5.png',
       'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=500&fit=crop'
     ]
   },
@@ -223,12 +223,12 @@ export const projects = [
     title: 'Multi-Vendor Marketplace',
     category: 'marketplace',
     description: 'Complete marketplace platform with vendor management and commission system',
-    thumbnail: 'public/projects/ecommerce/ecom-image.png',
+    thumbnail: '/projects/ecommerce/ecom-image.png',
     tech: ['WooCommerce', 'Dokan/WCFM', 'Multi-Vendor'],
     screenshots: [
-      'public/projects/ecommerce/marketplace-image1.png',
-      'public/projects/ecommerce/marketplace-image2.png',
-      'public/projects/ecommerce/marketplace-image3.png'
+      '/projects/ecommerce/marketplace-image1.png',
+      '/projects/ecommerce/marketplace-image2.png',
+      '/projects/ecommerce/marketplace-image3.png'
     ]
   }
 ];
