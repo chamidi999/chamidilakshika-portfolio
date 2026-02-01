@@ -90,24 +90,12 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
-    title: 'Paradise Travel Agency',
-    category: 'travel',
-    description: 'Complete travel booking platform with destination guides and tour packages',
-    thumbnail: '/projects/travel/paradise-thumb.jpg',
-    tech: ['WordPress', 'WooCommerce', 'Custom Theme'],
-    screenshots: [
-      'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&h=500&fit=crop'
-    ]
-  },
-  {
-    id: 2,
     title: 'Wanderlust Adventures',
     category: 'travel',
     description: 'Adventure travel website with booking system and customer reviews',
     thumbnail: '/projects/travel/travel-agency-image01.png',
     tech: ['WordPress', 'ElementorPro', 'Booking Plugin', 'SEO Optimization'],
+    url: "https://wanderlust-adventures.com",
     screenshots: [
       '/projects/travel/travel-agency-image02.png',
       '/projects/travel/travel-agency-image03.png',
@@ -115,25 +103,28 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     title: 'Global Tours & Travels',
     category: 'travel',
     description: 'Multi-destination travel portal with advanced search filters',
     thumbnail: '/projects/travel/Travel.png',
     tech: ['WordPress', 'Custom Plugin', 'Payment Gateway'],
+    url: "https://global-tours-travels.com",
     screenshots: [
       '/projects/travel/travel-image1.png',
       '/projects/travel/travel-image2.png',
       '/projects/travel/travel-image3.png'
     ]
   },
+  
   {
-    id: 4,
+    id: 3,
     title: 'Fashion Boutique Store',
     category: 'ecommerce',
     description: 'High-end fashion eCommerce with advanced product filtering',
     thumbnail: '/projects/fashion/Fashion E-commerce Store.png',
     tech: ['WooCommerce', 'Custom Theme', 'Payment Integration'],
+    // url: "https://fashion-boutique-store.com",
     screenshots: [
       '/projects/fashion/fashion e-commerce store-image1.png',
       '/projects/fashion/fashion e-commerce store-image1.png',
@@ -141,25 +132,13 @@ export const projects = [
     ]
   },
   {
-    id: 5,
-    title: 'Tech Gadgets Hub',
-    category: 'ecommerce',
-    description: 'Electronics store with product comparison and reviews',
-    thumbnail: '/projects/ecommerce/E-commerce Store.png',
-    tech: ['WooCommerce', 'WPBakery', 'Stripe/PayPal'],
-    screenshots: [
-      '/projects/ecommerce/ecom-image1.png',
-      '/projects/ecommerce/ecom-image2.png',
-      '/projects/ecommerce/ecom-image3.png'
-    ]
-  },
-  {
-    id: 6,
+    id: 4,
     title: 'Organic Food Market',
     category: 'ecommerce',
     description: 'Organic products store with subscription model',
     thumbnail: '/projects/ecommerce/grocerystore-image1.png',
     tech: ['WooCommerce', 'Subscriptions', 'Custom Checkout'],
+    url: "https://shopsmart.42web.io/",
     screenshots: [
       '/projects/ecommerce/grocery-store-image02.png',
       '/projects/ecommerce/grocery-store-image03.png',
@@ -167,12 +146,13 @@ export const projects = [
     ]
   },
   {
-    id: 7,
+    id: 5,
     title: 'Hotel Reservation System',
     category: 'booking',
     description: 'Complete hotel booking platform with room management',
     thumbnail: '/projects/booking/hotelbooking.png',
     tech: ['WordPress', 'Booking Calendar', 'Payment Gateway'],
+    url: "https://hotel-reservation.42web.io/",
     screenshots: [
       '/projects/booking/hotel booking-image1.png',
       '/projects/booking/hotel booking-image2.png',
@@ -180,12 +160,13 @@ export const projects = [
     ]
   },
   {
-    id: 8,
+    id: 6,
     title: 'Restaurant Booking Portal',
     category: 'booking',
     description: 'Table reservation system with menu integration',
     thumbnail: '/projects/booking/Hotel.png',
     tech: ['WordPress', 'OpenTable API', 'Custom Forms'],
+    // url: "https://restaurant-booking-portal.com",
     screenshots: [
       '/projects/booking/restaurant-image1.png',
       '/projects/booking/restaurant-image2.png',
@@ -193,38 +174,27 @@ export const projects = [
     ]
   },
   {
-    id: 9,
+    id: 7,
     title: 'Hotel Booking Site',
     category: 'booking',
     description: 'Multi-event booking system with ticketing',
     thumbnail: '/projects/booking/hotelbooking2.png',
     tech: ['WordPress', 'Events Calendar', 'WooCommerce'],
+    url: "https://hotelbooking-01.42web.io/",
     screenshots: [
       '/projects/booking/hotel booking-image4.png',
       '/projects/booking/hotel booking-image5.png',
-      'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=500&fit=crop'
+      '/projects/booking/hotel booking-image7.png'
     ]
   },
   {
-    id: 10,
-    title: 'Auto Dealer Marketplace',
-    category: 'carlisting',
-    description: 'Car dealership platform with advanced search and filters',
-    icon: Car,
-    tech: ['WordPress', 'Custom Post Types', 'Advanced Search'],
-    screenshots: [
-      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop',
-      'https://images.unsplash.com/photo-1494905998402-395d579af36f?w=800&h=500&fit=crop'
-    ]
-  },
-  {
-    id: 11,
+    id: 8,
     title: 'Multi-Vendor Marketplace',
     category: 'marketplace',
     description: 'Complete marketplace platform with vendor management and commission system',
     thumbnail: '/projects/ecommerce/ecom-image.png',
     tech: ['WooCommerce', 'Dokan/WCFM', 'Multi-Vendor'],
+    url: "https://marketplace01.42web.io/",
     screenshots: [
       '/projects/ecommerce/marketplace-image1.png',
       '/projects/ecommerce/marketplace-image2.png',

@@ -1,5 +1,4 @@
 // src/data/landingPagesData.js
-
 export const landingPages = [
   // BOOKING CATEGORY
   {
@@ -18,28 +17,13 @@ export const landingPages = [
     githubUrl: "https://github.com/chamidi999/hotel-booking-landing",
     featured: true
   },
-  {
-    id: 2,
-    title: "Flight Booking Platform",
-    category: "Booking",
-    description: "Flight search and booking landing page with date picker",
-    thumbnail: "/projects/booking/flight-booking-thumb.jpg",
-    screenshots: [
-      "/projects/booking/flight-booking-1.jpg",
-      "/projects/booking/flight-booking-2.jpg"
-    ],
-    tech: ["Next.js", "React", "CSS Modules"],
-    liveUrl: "https://flight-booking-demo.netlify.app",
-    githubUrl: "https://github.com/chamidi999/flight-booking-landing",
-    featured: false
-  },
-
+  
   // CAR LISTING CATEGORY
   {
-    id: 3,
+    id: 2,
     title: "Luxury Car Dealership",
     category: "Car Listing",
-    description: "Premium car listing platform with advanced filters",
+    description: "Premium car listing platform with advanced filters and 360° views",
     thumbnail: "/projects/carlisting/luxury-cars-thumb.jpg",
     screenshots: [
       "/projects/carlisting/luxury-cars-1.jpg",
@@ -50,27 +34,13 @@ export const landingPages = [
     githubUrl: "https://github.com/chamidi999/luxury-cars-landing",
     featured: true
   },
-  {
-    id: 4,
-    title: "Car Rental Service",
-    category: "Car Listing",
-    description: "Car rental landing page with booking system",
-    thumbnail: "/projects/carlisting/car-rental-thumb.jpg",
-    screenshots: [
-      "/projects/carlisting/car-rental-1.jpg"
-    ],
-    tech: ["Next.js", "React", "Tailwind CSS"],
-    liveUrl: "https://car-rental-demo.netlify.app",
-    githubUrl: "https://github.com/chamidi999/car-rental-landing",
-    featured: false
-  },
-
+  
   // E-COMMERCE CATEGORY
   {
-    id: 5,
+    id: 3,
     title: "Fashion E-commerce Store",
     category: "E-commerce",
-    description: "Modern fashion store with cart and checkout",
+    description: "Modern fashion store with cart, wishlist, and checkout",
     thumbnail: "/projects/ecommerce/fashion-store-thumb.jpg",
     screenshots: [
       "/projects/ecommerce/fashion-store-1.jpg",
@@ -82,27 +52,13 @@ export const landingPages = [
     githubUrl: "https://github.com/chamidi999/fashion-store-landing",
     featured: true
   },
-  {
-    id: 6,
-    title: "Electronics Shop",
-    category: "E-commerce",
-    description: "Electronics e-commerce landing with product filters",
-    thumbnail: "/projects/ecommerce/electronics-thumb.jpg",
-    screenshots: [
-      "/projects/ecommerce/electronics-1.jpg"
-    ],
-    tech: ["Next.js", "React", "CSS3"],
-    liveUrl: "https://electronics-demo.netlify.app",
-    githubUrl: "https://github.com/chamidi999/electronics-landing",
-    featured: false
-  },
-
+  
   // FASHION CATEGORY
   {
-    id: 7,
+    id: 4,
     title: "Boutique Fashion Brand",
     category: "Fashion",
-    description: "Elegant fashion brand landing page",
+    description: "Elegant fashion brand landing with seasonal collections",
     thumbnail: "/projects/fashion/boutique-thumb.jpg",
     screenshots: [
       "/projects/fashion/boutique-1.jpg",
@@ -113,13 +69,13 @@ export const landingPages = [
     githubUrl: "https://github.com/chamidi999/boutique-landing",
     featured: true
   },
-
+  
   // TRAVEL CATEGORY
   {
-    id: 8,
+    id: 5,
     title: "Travel Agency Website",
     category: "Travel",
-    description: "Travel booking and tour packages landing page",
+    description: "Travel booking with tour packages and destination guides",
     thumbnail: "/projects/travel/travel-agency-thumb.jpg",
     screenshots: [
       "/projects/travel/travel-agency-1.jpg",
@@ -131,8 +87,24 @@ export const landingPages = [
     featured: true
   },
 
-  // Add more landing pages following the same structure...
-  // You can duplicate and modify the above objects for all 100 pages
+  // EDUCATION / LMS CATEGORY
+  {
+    id: 6,
+    title: "Learning Management System",
+    category: "Education",
+    description: "Complete LMS platform with course management and student dashboard",
+    thumbnail: "/projects/LMS/LMS.png",
+    screenshots: [
+      "projects/LMS/LMS.png",
+      // "/projects/education/lms-2.jpg",
+      // "/projects/education/lms-3.jpg",
+      // "/projects/education/lms-4.jpg"
+    ],
+    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    liveUrl: "https://lms-platform-demo.netlify.app",
+    githubUrl: "https://github.com/chamidi999/lms-landing",
+    featured: true
+  }
 ];
 
 export const categories = [
@@ -141,7 +113,8 @@ export const categories = [
   "Car Listing",
   "E-commerce",
   "Fashion",
-  "Travel"
+  "Travel",
+  "Education"
 ];
 
 // Helper function to get featured landing pages
@@ -153,4 +126,28 @@ export const getFeaturedLandingPages = () => {
 export const getLandingPagesByCategory = (category) => {
   if (category === "All") return landingPages;
   return landingPages.filter(page => page.category === category);
+};
+
+// Helper function to get landing page by ID
+export const getLandingPageById = (id) => {
+  return landingPages.find(page => page.id === parseInt(id));
+};
+
+// Helper function to get related landing pages (same category, different ID)
+export const getRelatedLandingPages = (currentId, category, limit = 3) => {
+  return landingPages
+    .filter(page => page.category === category && page.id !== currentId)
+    .slice(0, limit);
+};
+
+// Get statistics
+export const getLandingPagesStats = () => {
+  return {
+    total: landingPages.length,
+    byCategory: categories.slice(1).map(cat => ({
+      category: cat,
+      count: getLandingPagesByCategory(cat).length
+    })),
+    featured: getFeaturedLandingPages().length
+  };
 };

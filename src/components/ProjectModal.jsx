@@ -1,6 +1,6 @@
 // src/components/ProjectModal.jsx
 import React, { useState } from 'react';
-import { X } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 
 const ProjectModal = ({ project, onClose }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -39,13 +39,26 @@ const ProjectModal = ({ project, onClose }) => {
           
           <p className="text-gray-300 mb-4">{project.description}</p>
           
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-6">
             {project.tech.map((tech, idx) => (
               <span key={idx} className="px-3 py-1 bg-purple-900 text-purple-200 rounded-full text-sm">
                 {tech}
               </span>
             ))}
           </div>
+
+          {project.url && (
+            <div className="mb-6">
+              <a 
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition font-semibold"
+              >
+                Visit Live Site <ExternalLink size={18} />
+              </a>
+            </div>
+          )}
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
             {project.screenshots.map((img, idx) => (

@@ -17,7 +17,7 @@ const LandingPages = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <h2 className="text-4xl font-bold text-center mb-4">
-          Next.js <span className="text-purple-600">Landing Pages</span>
+         Landing <span className="text-purple-600">Pages</span>
         </h2>
         <p className="text-center text-gray-400 mb-8">
           {landingPages.length} Professional Landing Pages Built with Next.js & React

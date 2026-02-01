@@ -21,10 +21,12 @@ const Projects = () => {
               <div
                 key={project.id}
                 className="bg-gray-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 cursor-pointer border border-gray-800 hover:border-purple-600"
-                onClick={() => setSelectedProject(project)}
               >
-                {/* Replace icon with thumbnail image */}
-                <div className="h-48 overflow-hidden bg-gray-800">
+                {/* Thumbnail image */}
+                <div 
+                  className="h-48 overflow-hidden bg-gray-800 cursor-pointer"
+                  onClick={() => setSelectedProject(project)}
+                >
                   <img 
                     src={project.thumbnail} 
                     alt={project.title}
@@ -42,9 +44,26 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <button className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
-                    View Details <ExternalLink size={16} />
-                  </button>
+                  
+                  <div className="flex gap-3">
+                    <button 
+                      onClick={() => setSelectedProject(project)}
+                      className="text-purple-400 hover:text-purple-300 flex items-center gap-2 flex-1"
+                    >
+                      View Details <ExternalLink size={16} />
+                    </button>
+                    {project.url && (
+                      <a 
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition flex items-center gap-2 text-sm"
+                      >
+                        Visit <ExternalLink size={14} />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             );
