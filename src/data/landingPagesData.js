@@ -19,39 +19,39 @@ export const landingPages = [
   },
   
   // CAR LISTING CATEGORY
-  {
-    id: 2,
-    title: "Luxury Car Dealership",
-    category: "Car Listing",
-    description: "Premium car listing platform with advanced filters and 360° views",
-    thumbnail: "/projects/carlisting/luxury-cars-thumb.jpg",
-    screenshots: [
-      "/projects/carlisting/luxury-cars-1.jpg",
-      "/projects/carlisting/luxury-cars-2.jpg"
-    ],
-    tech: ["Next.js", "React", "Styled Components"],
-    liveUrl: "https://luxury-cars-demo.netlify.app",
-    githubUrl: "https://github.com/chamidi999/luxury-cars-landing",
-    featured: true
-  },
+  // {
+  //   id: 2,
+  //   title: "Luxury Car Dealership",
+  //   category: "Car Listing",
+  //   description: "Premium car listing platform with advanced filters and 360° views",
+  //   thumbnail: "/projects/carlisting/luxury-cars-thumb.jpg",
+  //   screenshots: [
+  //     "/projects/carlisting/luxury-cars-1.jpg",
+  //     "/projects/carlisting/luxury-cars-2.jpg"
+  //   ],
+  //   tech: ["Next.js", "React", "Styled Components"],
+  //   liveUrl: "https://luxury-cars-demo.netlify.app",
+  //   githubUrl: "https://github.com/chamidi999/luxury-cars-landing",
+  //   featured: true
+  // },
   
   // E-COMMERCE CATEGORY
   {
-    id: 3,
-    title: "Fashion E-commerce Store",
-    category: "E-commerce",
-    description: "Modern fashion store with cart, wishlist, and checkout",
-    thumbnail: "/projects/ecommerce/fashion-store-thumb.jpg",
-    screenshots: [
-      "/projects/ecommerce/fashion-store-1.jpg",
-      "/projects/ecommerce/fashion-store-2.jpg",
-      "/projects/ecommerce/fashion-store-3.jpg"
-    ],
-    tech: ["Next.js", "React", "Tailwind CSS", "Redux"],
-    liveUrl: "https://fashion-store-demo.netlify.app",
-    githubUrl: "https://github.com/chamidi999/fashion-store-landing",
-    featured: true
-  },
+  id: 8,
+  title: "TechZone 3D Electronics Store",
+  category: "E-commerce",
+  description: "Immersive 3D electronics e-commerce platform with interactive product displays, featuring December deals and responsive design across all devices",
+  thumbnail: "/projects/landingpages/Electro/electronics.png",
+  screenshots: [
+    "/projects/ecommerce/electronics-3d-1.png",
+    "/projects/ecommerce/electronics-3d-2.png",
+    "/projects/ecommerce/electronics-3d-3.png"
+  ],
+  tech: ["Next.js", "React", "Three.js", "Tailwind CSS", "Framer Motion"],
+  liveUrl: "https://techzone-3d-demo.netlify.app",
+  githubUrl: "https://github.com/chamidi999/techzone-3d-landing",
+  featured: true
+},
   
   // FASHION CATEGORY
   {
@@ -76,7 +76,7 @@ export const landingPages = [
     title: "Travel Agency Website",
     category: "Travel",
     description: "Travel booking with tour packages and destination guides",
-    thumbnail: "/projects/travel/travel-agency-thumb.jpg",
+    thumbnail: "/projects/landingpages/Travel/travel.png",
     screenshots: [
       "/projects/travel/travel-agency-1.jpg",
       "/projects/travel/travel-agency-2.jpg"
@@ -89,22 +89,34 @@ export const landingPages = [
 
   // EDUCATION / LMS CATEGORY
   {
-    id: 6,
-    title: "Learning Management System",
-    category: "Education",
-    description: "Complete LMS platform with course management and student dashboard",
-    thumbnail: "/projects/LMS/LMS.png",
-    screenshots: [
-      "projects/LMS/LMS.png",
-      // "/projects/education/lms-2.jpg",
-      // "/projects/education/lms-3.jpg",
-      // "/projects/education/lms-4.jpg"
-    ],
-    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    liveUrl: "https://lms-platform-demo.netlify.app",
-    githubUrl: "https://github.com/chamidi999/lms-landing",
-    featured: true
-  }
+  id: 6,
+  title: "Learning Management System",
+  category: "Education",
+  description: "Complete LMS platform with course management and student dashboard",
+  thumbnail: "/projects/landingpages/LMS/LMS.png",  // Fixed path
+  screenshots: [
+    "/projects/landingpages/LMS/LMS.png",  // Fixed path
+  ],
+  tech: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
+  liveUrl: "https://lms-platform-demo.netlify.app",
+  githubUrl: "https://github.com/chamidi999/lms-landing",
+  featured: true
+},
+  {
+  id: 7,
+  title: "Christmas Magic Landing Page",
+  category: "Holiday/Seasonal",
+  description: "Festive Christmas-themed landing page featuring holiday traditions, gift collections, and customer testimonials with magical animations and snow effects",
+  thumbnail: "/projects/landingpages/Christmas/Christmas.png",
+  screenshots: [
+    "/projects/landingpages/Christmas/Christmas.png", // Use the actual path
+    // Add more screenshots if you have them
+  ],
+  tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+  liveUrl: "https://christmas-magic-demo.netlify.app",
+  githubUrl: "https://github.com/chamidi999/christmas-magic-landing",
+  featured: true
+}
 ];
 
 export const categories = [
@@ -114,7 +126,8 @@ export const categories = [
   "E-commerce",
   "Fashion",
   "Travel",
-  "Education"
+  "Education",
+  "Holiday/Seasonal"
 ];
 
 // Helper function to get featured landing pages

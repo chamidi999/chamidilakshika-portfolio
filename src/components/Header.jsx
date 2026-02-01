@@ -35,12 +35,12 @@ const Header = () => {
           </div>
           
           
-          <a
+          {/* <a
             href="mailto:mchamidi888@gmail.com"
             className="hidden md:block px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition"
           >
             Hire Me
-          </a>
+          </a> */}
           
           <button
             className="md:hidden text-white"
