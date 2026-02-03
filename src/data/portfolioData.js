@@ -107,13 +107,13 @@ export const projects = [
     title: 'Global Tours & Travels',
     category: 'travel',
     description: 'Multi-destination travel portal with advanced search filters',
-    thumbnail: '/projects/travel/Travel.png',
+    thumbnail: '/projects/travel/Global Tours & Travels.png',
     tech: ['WordPress', 'Custom Plugin', 'Payment Gateway'],
-    url: "https://global-tours-travels.com",
+    // url: "https://global-tours-travels.com",
     screenshots: [
-      '/projects/travel/travel-image1.png',
-      '/projects/travel/travel-image2.png',
-      '/projects/travel/travel-image3.png'
+      '/projects/travel/Global Tours & Travels.png',
+      '/projects/travel/Global Tours & Travels.png',
+      '/projects/travel/Global Tours & Travels.png'
     ]
   },
   
