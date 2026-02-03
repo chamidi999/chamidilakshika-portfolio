@@ -1,15 +1,15 @@
 // src/components/LandingPages.jsx
 import React, { useState } from 'react';
 import { ExternalLink, Github, Filter } from 'lucide-react';
-import { landingPages, categories, getLandingPagesByCategory } from '../data/landingPagesData';
+import { landingPages, mainCategories, getLandingPagesByMainCategory } from '../data/landingPagesData';
 import ProjectModal from './ProjectModal';
 
 const LandingPages = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('all');
   const [showAll, setShowAll] = useState(false);
 
-  const filteredPages = getLandingPagesByCategory(activeCategory);
+  const filteredPages = getLandingPagesByMainCategory(activeCategory);
   const displayedPages = showAll ? filteredPages : filteredPages.slice(0, 9);
 
   return (
@@ -23,25 +23,57 @@ const LandingPages = () => {
           {landingPages.length} Professional Landing Pages Built with Next.js & React
         </p>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => {
-                setActiveCategory(category);
-                setShowAll(false);
-              }}
-              className={`px-6 py-2 rounded-full transition duration-300 flex items-center gap-2 ${
-                activeCategory === category
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-              }`}
-            >
-              <Filter size={16} />
-              {category}
-            </button>
-          ))}
+        {/* Category Cards */}
+        <div className="grid gap-6 md:grid-cols-3 mb-12">
+          {mainCategories.map((category) => {
+            const categoryCount = getLandingPagesByMainCategory(category.key).length;
+            const isActive = activeCategory === category.key;
+
+            return (
+              <button
+                key={category.key}
+                onClick={() => {
+                  setActiveCategory(category.key);
+                  setShowAll(false);
+                }}
+                className={`text-left rounded-2xl border transition duration-300 p-6 bg-gray-900/80 hover:-translate-y-1 ${
+                  isActive ? 'border-purple-500 shadow-lg shadow-purple-500/20' : 'border-gray-800'
+                }`}
+              >
+                <div className={`rounded-xl p-4 bg-gradient-to-br ${category.accent}`}>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs uppercase tracking-[0.2em] text-gray-400">Category</span>
+                    <span className="text-xs bg-gray-950/70 text-purple-200 px-2 py-1 rounded-full">
+                      {categoryCount} pages
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{category.title}</h3>
+                  <p className="text-sm text-gray-300">{category.description}</p>
+                </div>
+                <div className="flex items-center gap-2 mt-4 text-sm text-purple-300">
+                  <Filter size={14} />
+                  <span>{isActive ? 'Selected' : 'Filter projects'}</span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="flex justify-center mb-10">
+          <button
+            onClick={() => {
+              setActiveCategory('all');
+              setShowAll(false);
+            }}
+            className={`px-6 py-2 rounded-full border transition duration-300 flex items-center gap-2 ${
+              activeCategory === 'all'
+                ? 'border-purple-500 text-purple-200 bg-purple-500/10'
+                : 'border-gray-800 text-gray-400 hover:border-gray-600'
+            }`}
+          >
+            <Filter size={16} />
+            View all landing pages
+          </button>
         </div>
 
         {/* Projects Grid */}
@@ -139,7 +171,8 @@ const LandingPages = () => {
         {/* Results Count */}
         <p className="text-center text-gray-500 mt-6 text-sm">
           Showing {displayedPages.length} of {filteredPages.length} landing pages
-          {activeCategory !== 'All' && ` in ${activeCategory}`}
+          {activeCategory !== 'all' &&
+            ` in ${mainCategories.find((category) => category.key === activeCategory)?.title}`}
         </p>
       </div>
 
