@@ -132,33 +132,33 @@ export const categories = [
 
 export const mainCategories = [
   {
-    key: "ecommerce",
-    title: "E-commerce",
-    description: "Online stores, sales funnels, and digital retail experiences.",
-    accent: "from-amber-500/20 via-orange-500/10 to-transparent"
-  },
-  {
-    key: "realstate",
-    title: "Real Estate",
-    description: "Booking, travel, and seasonal destination landing pages.",
-    accent: "from-emerald-500/20 via-teal-500/10 to-transparent"
-  },
-  {
-    key: "product",
-    title: "Product",
-    description: "Lifestyle brands, education platforms, and product showcases.",
+    key: "travel",
+    title: "Travel & Booking",
+    description: "Hotels, tours, and seasonal travel experiences.",
     accent: "from-sky-500/20 via-purple-500/10 to-transparent"
+  },
+  {
+    key: "commerce",
+    title: "Commerce & Retail",
+    description: "E-commerce storefronts and fashion brands.",
+    accent: "from-purple-500/20 via-pink-500/10 to-transparent"
+  },
+  {
+    key: "education",
+    title: "Learning & Services",
+    description: "Courses, platforms, and service-driven pages.",
+    accent: "from-emerald-500/20 via-teal-500/10 to-transparent"
   }
 ];
 
 const mainCategoryMap = {
-  Booking: "realstate",
-  Travel: "realstate",
-  "Holiday/Seasonal": "realstate",
-  "E-commerce": "ecommerce",
-  Fashion: "product",
-  Education: "product",
-  "Car Listing": "product"
+  Booking: "travel",
+  Travel: "travel",
+  "Holiday/Seasonal": "travel",
+  "E-commerce": "commerce",
+  Fashion: "commerce",
+  Education: "education",
+  "Car Listing": "education"
 };
 
 // Helper function to get featured landing pages
