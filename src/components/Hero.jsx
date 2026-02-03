@@ -1,8 +1,33 @@
 // src/components/Hero.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Code, Github, Linkedin, Mail } from 'lucide-react';
+import { landingPages } from '../data/landingPagesData';
 
 const Hero = () => {
+  const carouselItems = landingPages
+    .filter((project) => project.thumbnail)
+    .slice(0, 6)
+    .map((project) => ({
+      title: project.title,
+      thumbnail: project.thumbnail
+    }));
+  const fallbackItems = [
+    {
+      title: 'Project Highlight',
+      thumbnail: 'https://via.placeholder.com/800x600/111827/9333ea?text=Project+Preview'
+    }
+  ];
+  const itemsToShow = carouselItems.length ? carouselItems : fallbackItems;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % itemsToShow.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [itemsToShow.length]);
+
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -82,17 +107,54 @@ const Hero = () => {
             </div>
           </div>
           <div className="hidden md:flex justify-center">
-            <div className="relative w-[22rem] h-[22rem]">
-              <div className="absolute inset-0 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-purple-500/20" />
-              <div className="absolute -top-6 -right-6 h-20 w-20 rounded-2xl bg-purple-500/30 blur-xl animate-pulse" />
-              <div className="absolute -bottom-8 left-6 h-24 w-24 rounded-full bg-blue-500/30 blur-2xl animate-pulse" />
-              <div className="absolute inset-6 rounded-2xl bg-gradient-to-br from-purple-600/60 via-purple-500/40 to-blue-500/40 flex flex-col items-center justify-center text-center gap-4">
-                <Code size={90} className="text-white" />
-                <div className="text-white font-semibold tracking-wide">
-                  Building modern web experiences
+            <div className="relative w-full max-w-md">
+              <div className="absolute -top-6 -left-6 h-24 w-24 rounded-2xl bg-purple-500/30 blur-2xl animate-pulse" />
+              <div className="absolute -bottom-8 right-6 h-28 w-28 rounded-full bg-blue-500/30 blur-3xl animate-pulse" />
+              <div className="relative h-[26rem] rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl shadow-purple-500/20">
+                {itemsToShow.map((item, index) => (
+                  <div
+                    key={item.title}
+                    className={`absolute inset-0 transition duration-700 ease-out ${
+                      index === activeIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+                    }`}
+                  >
+                    <img
+                      src={item.thumbnail}
+                      alt={item.title}
+                      className="h-full w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-900/10 to-transparent" />
+                  </div>
+                ))}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-purple-500/40 flex items-center justify-center">
+                      <Code size={20} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-purple-200/80">
+                        Featured project
+                      </p>
+                      <h3 className="text-lg font-semibold text-white">
+                        {itemsToShow[activeIndex]?.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex gap-2">
+                    {itemsToShow.map((_, index) => (
+                      <span
+                        key={`indicator-${index}`}
+                        className={`h-1.5 flex-1 rounded-full transition ${
+                          index === activeIndex ? 'bg-purple-400' : 'bg-white/20'
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
-                <div className="text-sm text-purple-100/80">React • Next.js • WordPress</div>
               </div>
+              <p className="mt-4 text-sm text-gray-300 text-center">
+                Browse a rotating preview of recent landing page builds.
+              </p>
             </div>
           </div>
         </div>
