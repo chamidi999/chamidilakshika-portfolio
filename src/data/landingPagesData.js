@@ -130,6 +130,37 @@ export const categories = [
   "Holiday/Seasonal"
 ];
 
+export const mainCategories = [
+  {
+    key: "ecommerce",
+    title: "E-commerce",
+    description: "Online stores, sales funnels, and digital retail experiences.",
+    accent: "from-amber-500/20 via-orange-500/10 to-transparent"
+  },
+  {
+    key: "realstate",
+    title: "Real Estate",
+    description: "Booking, travel, and seasonal destination landing pages.",
+    accent: "from-emerald-500/20 via-teal-500/10 to-transparent"
+  },
+  {
+    key: "product",
+    title: "Product",
+    description: "Lifestyle brands, education platforms, and product showcases.",
+    accent: "from-sky-500/20 via-purple-500/10 to-transparent"
+  }
+];
+
+const mainCategoryMap = {
+  Booking: "realstate",
+  Travel: "realstate",
+  "Holiday/Seasonal": "realstate",
+  "E-commerce": "ecommerce",
+  Fashion: "product",
+  Education: "product",
+  "Car Listing": "product"
+};
+
 // Helper function to get featured landing pages
 export const getFeaturedLandingPages = () => {
   return landingPages.filter(page => page.featured);
@@ -139,6 +170,11 @@ export const getFeaturedLandingPages = () => {
 export const getLandingPagesByCategory = (category) => {
   if (category === "All") return landingPages;
   return landingPages.filter(page => page.category === category);
+};
+
+export const getLandingPagesByMainCategory = (mainCategory) => {
+  if (mainCategory === "all") return landingPages;
+  return landingPages.filter(page => mainCategoryMap[page.category] === mainCategory);
 };
 
 // Helper function to get landing page by ID
