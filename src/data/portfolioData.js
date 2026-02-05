@@ -93,7 +93,7 @@ export const posters = [
     title: 'Comedy Poster',
     category: 'poster',
     description: 'Vibrant comedy event poster with playful typography and warm gradients.',
-    thumbnail: '/projects/posters/comedy-poster.svg',
+    thumbnail: '/projects/posters/comedy-poster.png',
     tech: ['Poster Design', 'Typography', 'Color Theory'],
     screenshots: [
       '/projects/posters/comedy-poster.svg'
@@ -104,7 +104,7 @@ export const posters = [
     title: 'Book Fair Poster',
     category: 'poster',
     description: 'Elegant book fair poster with classic serif styling and cozy tones.',
-    thumbnail: '/projects/posters/book-poster.svg',
+    thumbnail: '/projects/posters/book-poster.png',
     tech: ['Poster Design', 'Illustration', 'Layout'],
     screenshots: [
       '/projects/posters/book-poster.svg'
@@ -115,7 +115,7 @@ export const posters = [
     title: 'Horror Night Poster',
     category: 'poster',
     description: 'Moody horror screening poster with bold contrast and dramatic accents.',
-    thumbnail: '/projects/posters/horror-poster.svg',
+    thumbnail: '/projects/posters/horror-movie-poster.png',
     tech: ['Poster Design', 'Atmosphere', 'Contrast'],
     screenshots: [
       '/projects/posters/horror-poster.svg'
