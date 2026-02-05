@@ -23,7 +23,7 @@ const Header = () => {
           </button>
           
           <div className="hidden md:flex space-x-8">
-            {['home', 'about', 'skills', 'experience', 'projects'].map((item) => (
+            {['home', 'about', 'skills', 'experience', 'projects', 'posters'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -53,7 +53,7 @@ const Header = () => {
         
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-2">
-            {['home', 'about', 'skills', 'experience', 'projects'].map((item) => (
+            {['home', 'about', 'skills', 'experience', 'projects', 'posters'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
