@@ -6,6 +6,7 @@ import ProjectModal from './ProjectModal';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const filteredProjects = projects.filter((project) => project.category !== 'poster');
 
   return (
     <section id="projects" className="py-20 bg-black">
@@ -16,7 +17,7 @@ const Projects = () => {
         <p className="text-center text-gray-400 mb-12">Click on any project to view screenshots</p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => {
+          {filteredProjects.map((project) => {
             return (
               <div
                 key={project.id}

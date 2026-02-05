@@ -87,6 +87,42 @@ export const experiences = [
   }
 ];
 
+export const posters = [
+  {
+    id: 1,
+    title: 'Comedy Poster',
+    category: 'poster',
+    description: 'Vibrant comedy event poster with playful typography and warm gradients.',
+    thumbnail: '/projects/posters/comedy-poster.svg',
+    tech: ['Poster Design', 'Typography', 'Color Theory'],
+    screenshots: [
+      '/projects/posters/comedy-poster.svg'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Book Fair Poster',
+    category: 'poster',
+    description: 'Elegant book fair poster with classic serif styling and cozy tones.',
+    thumbnail: '/projects/posters/book-poster.svg',
+    tech: ['Poster Design', 'Illustration', 'Layout'],
+    screenshots: [
+      '/projects/posters/book-poster.svg'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Horror Night Poster',
+    category: 'poster',
+    description: 'Moody horror screening poster with bold contrast and dramatic accents.',
+    thumbnail: '/projects/posters/horror-poster.svg',
+    tech: ['Poster Design', 'Atmosphere', 'Contrast'],
+    screenshots: [
+      '/projects/posters/horror-poster.svg'
+    ]
+  },
+];
+
 export const projects = [
   {
     id: 1,
