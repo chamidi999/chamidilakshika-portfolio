@@ -90,6 +90,39 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
+    title: 'Comedy Poster',
+    category: 'poster',
+    description: 'Vibrant comedy event poster with playful typography and warm gradients.',
+    thumbnail: '/projects/posters/comedy-poster.svg',
+    tech: ['Poster Design', 'Typography', 'Color Theory'],
+    screenshots: [
+      '/projects/posters/comedy-poster.svg'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Book Fair Poster',
+    category: 'poster',
+    description: 'Elegant book fair poster with classic serif styling and cozy tones.',
+    thumbnail: '/projects/posters/book-poster.svg',
+    tech: ['Poster Design', 'Illustration', 'Layout'],
+    screenshots: [
+      '/projects/posters/book-poster.svg'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Horror Night Poster',
+    category: 'poster',
+    description: 'Moody horror screening poster with bold contrast and dramatic accents.',
+    thumbnail: '/projects/posters/horror-poster.svg',
+    tech: ['Poster Design', 'Atmosphere', 'Contrast'],
+    screenshots: [
+      '/projects/posters/horror-poster.svg'
+    ]
+  },
+  {
+    id: 4,
     title: 'Wanderlust Adventures',
     category: 'travel',
     description: 'Adventure travel website with booking system and customer reviews',
@@ -103,7 +136,7 @@ export const projects = [
     ]
   },
   {
-    id: 2,
+    id: 5,
     title: 'Global Tours & Travels',
     category: 'travel',
     description: 'Multi-destination travel portal with advanced search filters',
@@ -118,7 +151,7 @@ export const projects = [
   },
   
   {
-    id: 3,
+    id: 6,
     title: 'Fashion Boutique Store',
     category: 'ecommerce',
     description: 'High-end fashion eCommerce with advanced product filtering',
@@ -132,7 +165,7 @@ export const projects = [
     ]
   },
   {
-    id: 4,
+    id: 7,
     title: 'Organic Food Market',
     category: 'ecommerce',
     description: 'Organic products store with subscription model',
@@ -146,7 +179,7 @@ export const projects = [
     ]
   },
   {
-    id: 5,
+    id: 8,
     title: 'Hotel Reservation System',
     category: 'booking',
     description: 'Complete hotel booking platform with room management',
@@ -160,7 +193,7 @@ export const projects = [
     ]
   },
   {
-    id: 6,
+    id: 9,
     title: 'Restaurant Booking Portal',
     category: 'booking',
     description: 'Table reservation system with menu integration',
@@ -174,7 +207,7 @@ export const projects = [
     ]
   },
   {
-    id: 7,
+    id: 10,
     title: 'Hotel Booking Site',
     category: 'booking',
     description: 'Multi-event booking system with ticketing',
@@ -188,7 +221,7 @@ export const projects = [
     ]
   },
   {
-    id: 8,
+    id: 11,
     title: 'Multi-Vendor Marketplace',
     category: 'marketplace',
     description: 'Complete marketplace platform with vendor management and commission system',
