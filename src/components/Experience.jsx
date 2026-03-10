@@ -33,6 +33,35 @@ const Experience = () => {
                   </div>
                 )}
               </div>
+              
+                {exp.keyProjects && exp.keyProjects.length > 0 && (
+                  <div className="mt-6">
+                    <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Projects:</h4>
+                    <ul className="space-y-3">
+                      {exp.keyProjects.map((project, index) => (
+                        <li key={index} className="text-gray-300 text-sm">
+                          <span className="text-purple-600 mr-2">•</span>
+                          <span className="font-semibold">{project.name}</span>: {project.description}
+                          <span className="block text-xs text-gray-400 mt-1 ml-4">
+                            Technologies: {project.technologies.join(', ')}
+                            {project.liveLink && (
+                              <>
+                                {' '}| Live: <a
+                                  className="text-purple-400 hover:text-purple-300 underline"
+                                  href={project.liveLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {project.liveLink}
+                                </a>
+                              </>
+                            )}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
             </div>
           ))}
         </div>

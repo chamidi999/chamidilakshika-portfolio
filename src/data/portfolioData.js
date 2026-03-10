@@ -1,5 +1,5 @@
 // src/data/portfolioData.js
-import { Plane, ShoppingCart, Calendar, Car } from 'lucide-react';
+import { Plane, ShoppingCart, Calendar, Car, Briefcase, ExternalLink } from 'lucide-react';
 
 export const skillCategories = [
   {
@@ -83,6 +83,44 @@ export const experiences = [
       "Managed ongoing website maintenance, performing content updates, troubleshooting issues, and ensuring sites remain secure and up-to-date",
       "Collaborated with the development team to resolve technical challenges, improve site functionality, and implement feature updates based on client requirements",
       "Integrated payment gateways and shipping solutions in WooCommerce, enabling secure transactions and smooth checkout processes for users"
+     ],
+    keyProjects: [
+      {
+        name: "Athena",
+        description: "Developed 76+ UI screens from Figma to WordPress.",
+        technologies: ["Figma", "WordPress", "UI Development"]
+      },
+      {
+        name: "Sipway Campus Site",
+        description: "Led full-stack development, resolved server outages, hosting issues, and login bugs.",
+        technologies: ["WordPress", "Full-Stack Development", "Server Troubleshooting"]
+      },
+      {
+        name: "Driftdesk",
+        description: "Built with Divi, WooCommerce, and PayPal integration.",
+        technologies: ["Divi", "WooCommerce", "PayPal"]
+      },
+      {
+        name: "WashBar",
+        description: "Delivered end-to-end development with Elementor Pro and GoDaddy hosting.",
+        technologies: ["Elementor Pro", "WordPress", "GoDaddy Hosting"]
+      },
+      {
+        name: "GP Advisory",
+        description: "Developed Insight and Project pages and resolved database/backend issues.",
+        technologies: ["WordPress", "MySQL", "Backend Debugging"]
+      },
+      {
+        name: "Airto Travels",
+        description: "Developed a travel booking website with custom features.",
+        technologies: ["WordPress", "Booking Features", "Custom Development"]
+      },
+      {
+        name: "WestroTravel & Nations Bus",
+        description: "Created UI designs for tour plans and implemented critical live site server-side fixes.",
+        technologies: ["UI Design", "WordPress", "Server-Side Fixes"]
+      }
+  
     ]
   }
 ];
@@ -269,5 +307,6 @@ export const projects = [
       '/projects/ecommerce/marketplace-image2.png',
       '/projects/ecommerce/marketplace-image3.png'
     ]
-  }
+  },
+  
 ];
