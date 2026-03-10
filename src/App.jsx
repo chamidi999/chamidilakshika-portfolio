@@ -9,6 +9,7 @@ import LandingPages from './components/LandingPages';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Skills />
       <Experience />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
